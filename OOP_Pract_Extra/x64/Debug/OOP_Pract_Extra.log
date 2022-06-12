@@ -1,2 +1,14 @@
-﻿  Organism.cpp
-  OOP_Pract_Extra.vcxproj -> C:\Users\tswet\OneDrive\Documents\ФМИ\OOP_Pract_Extra\x64\Debug\OOP_Pract_Extra.exe
+﻿  Fauna.cpp
+  Flora.cpp
+  Fungi.cpp
+  Organism.cpp
+  RedBook.cpp
+  Source.cpp
+  StringC.cpp
+C:\Users\tswet\OneDrive\Documents\ФМИ\OOP\OOP_Pract_Extra\StringC.cpp(44,2): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\tswet\OneDrive\Documents\ФМИ\OOP\OOP_Pract_Extra\StringC.cpp(55,15): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\tswet\OneDrive\Documents\ФМИ\OOP\OOP_Pract_Extra\StringC.cpp(66,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\tswet\OneDrive\Documents\ФМИ\OOP\OOP_Pract_Extra\StringC.cpp(201,27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+C:\Users\tswet\OneDrive\Documents\ФМИ\OOP\OOP_Pract_Extra\RedBook.cpp(67): warning C4715: 'RedBook::addOrganism': not all control paths return a value
+  OOP_Pract_Extra.vcxproj -> C:\Users\tswet\OneDrive\Documents\ФМИ\OOP\x64\Debug\OOP_Pract_Extra.exe

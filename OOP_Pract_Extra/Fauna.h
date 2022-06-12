@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Organism.h"
-#include "VectorC.hpp"
+#include "Vector.hpp"
 #include "StringC.h"
 
 #include <iostream>
@@ -12,7 +12,7 @@ class Fauna : public Organism
 
 public:
 	Fauna();
-	Fauna(const StringC&, double, const VectorC<StringC>&, const StringC&, bool);
+	Fauna(const StringC&, double, const Vector<StringC>&, const StringC&, bool);
 
 	void print() const override;
 
