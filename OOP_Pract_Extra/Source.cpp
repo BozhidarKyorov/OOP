@@ -6,6 +6,19 @@
 #include "Vector.hpp"
 #include "StringC.h"
 
+
+int strToint(const char* str)
+{
+	int index = 0;
+	int temp = 1;
+	for (int i = StringC(str).getSize() - 1; i >= 0; i--)
+	{
+		index += (int(str[i]) - int(char('0'))) * temp;
+		temp *= 10;
+	}
+	return index;
+}
+
 int main()
 {
 	/*Vector<StringC> hab;
@@ -110,7 +123,7 @@ int main()
 				std::cout << "    name or index" << std::endl;
 				std::cout << "    >";
 				consoleCom.getline(std::cin);
-				
+				int conNum = strToint(consoleCom.getString());
 				int index = tempBook.getSpeciesIndex(consoleCom);
 				if (index == -1)
 				{
