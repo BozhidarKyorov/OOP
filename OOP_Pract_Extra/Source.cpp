@@ -6,42 +6,26 @@
 #include "Vector.hpp"
 #include "StringC.h"
 
+void commandMenu(RedBook&);
 
-int strToint(const char* str)
-{
-	int index = 0;
-	int temp = 1;
-	for (int i = StringC(str).getSize() - 1; i >= 0; i--)
-	{
-		index += (int(str[i]) - int(char('0'))) * temp;
-		temp *= 10;
-	}
-	return index;
-}
+int strToint(const char*);
 
 int main()
 {
-	/*Vector<StringC> hab;
-	hab.pushBack("Africa");
-	hab.pushBack("South Asia");
-
-	Flora f("orchid", 4, hab, "least concern");
-	Fungi fun("guba", 1, hab, "extinct", false);
-	
-	RedBook b;
-	b.addOrganism(f);
-	b.addOrganism(fun);
-
-	b.printAll();*/
-
 
 	RedBook tempBook;
 
+	commandMenu(tempBook);
+
 	//MENU 
 	//!!!not finished for add!!!
-	//need stirng to size_t func?
 	//finished until remove
 
+	return 0;
+}
+
+void commandMenu(RedBook& tempBook)
+{
 	StringC consoleCom;
 	std::cout << " Welcome" << std::endl;
 	std::cout << "Available commands:" << std::endl;
@@ -130,7 +114,7 @@ int main()
 					std::cout << "    Organism is not in the book." << std::endl;
 					continue;
 				}
-				
+
 				if (!tempBook.removeAtIndex(index))
 				{
 					std::cout << "    Error in removing!" << std::endl;
@@ -138,13 +122,22 @@ int main()
 				}
 				std::cout << "    Successful removal" << std::endl;
 				continue;
-				
 
-				
+
+
 			}
 		}
 	}
+}
 
-
-	return 0;
+int strToint(const char* str)
+{
+	int index = 0;
+	int temp = 1;
+	for (int i = StringC(str).getSize() - 1; i >= 0; i--)
+	{
+		index += (int(str[i]) - int(char('0'))) * temp;
+		temp *= 10;
+	}
+	return index;
 }

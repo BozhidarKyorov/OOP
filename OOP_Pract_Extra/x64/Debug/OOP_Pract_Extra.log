@@ -1,3 +1,3 @@
 ﻿  Source.cpp
-E:\Uni\OOP1\OOP_Pract_Extra\Source.cpp(14,2): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  OOP_Pract_Extra.vcxproj -> E:\Uni\OOP1\x64\Debug\OOP_Pract_Extra.exe
+C:\Users\tswet\OneDrive\Documents\ФМИ\OOP\OOP_Pract_Extra\Source.cpp(137,2): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  OOP_Pract_Extra.vcxproj -> C:\Users\tswet\OneDrive\Documents\ФМИ\OOP\x64\Debug\OOP_Pract_Extra.exe
