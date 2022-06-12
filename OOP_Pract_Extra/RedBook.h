@@ -23,10 +23,12 @@ public:
 	void printFlora() const;
 	void printFungi() const;
 
+	size_t getSize() const;
+
 	bool addOrganism(const Organism&);
 	bool removeAtIndex(size_t);
-	void printConservationLevel(size_t) const;
 
+	void printConservationLevel(size_t) const;
 	bool setConservationLevelByIndex(int, const StringC&);
 
 	int getSpeciesIndex(const StringC&) const;

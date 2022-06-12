@@ -193,3 +193,8 @@ int RedBook::getSpeciesIndex(const StringC& name) const
 
 	return -1;
 }
+
+size_t RedBook::getSize() const
+{
+	return size;
+}
