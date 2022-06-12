@@ -3,14 +3,14 @@
 #include "Fungi.h"
 #include "RedBook.h"
 
-#include "VectorC.hpp"
+#include "Vector.hpp"
 #include "StringC.h"
 
 int main()
 {
-	VectorC<StringC> hab;
-	hab.push("Africa");
-	hab.push("South Asia");
+	Vector<StringC> hab;
+	hab.pushBack("Africa");
+	hab.pushBack("South Asia");
 
 	Flora f("orchid", 4, hab, "least concern");
 	Fungi fun("guba", 1, hab, "extinct", false);

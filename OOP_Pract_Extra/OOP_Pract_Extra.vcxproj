@@ -154,7 +154,7 @@
     <ClInclude Include="Organism.h" />
     <ClInclude Include="RedBook.h" />
     <ClInclude Include="StringC.h" />
-    <ClInclude Include="VectorC.hpp" />
+    <ClInclude Include="Vector.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
