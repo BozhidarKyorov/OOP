@@ -1,14 +1,1 @@
-﻿  Fauna.cpp
-  Flora.cpp
-  Fungi.cpp
-  Organism.cpp
-  RedBook.cpp
-  Source.cpp
-  StringC.cpp
-E:\Uni\OOP1\OOP_Pract_Extra\StringC.cpp(44,2): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-E:\Uni\OOP1\OOP_Pract_Extra\StringC.cpp(55,15): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-E:\Uni\OOP1\OOP_Pract_Extra\StringC.cpp(66,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-E:\Uni\OOP1\OOP_Pract_Extra\StringC.cpp(201,27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  Generating Code...
-E:\Uni\OOP1\OOP_Pract_Extra\RedBook.cpp(67): warning C4715: 'RedBook::addOrganism': not all control paths return a value
-  OOP_Pract_Extra.vcxproj -> E:\Uni\OOP1\x64\Debug\OOP_Pract_Extra.exe
+﻿  OOP_Pract_Extra.vcxproj -> E:\Uni\OOP1\x64\Debug\OOP_Pract_Extra.exe
