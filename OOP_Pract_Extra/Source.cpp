@@ -39,29 +39,29 @@ void commandMenu(RedBook& tempBook)
 
 		if (consoleCom == "1" || consoleCom == "print" || consoleCom == "Print")
 		{
-			std::cout << "	1 - print Flora" << std::endl;
-			std::cout << "	2 - print Fauna" << std::endl;
-			std::cout << "	3 - print Fungi" << std::endl;
+			std::cout << "  1 - print Flora" << std::endl;
+			std::cout << "  2 - print Fauna" << std::endl;
+			std::cout << "  3 - print Fungi" << std::endl;
 			std::cout << "  4 - print Conservation level" << std::endl;
 			std::cout << "  5 - print all" << std::endl;
 			std::cout << "  0 - quit" << std::endl;
-			std::cout << "	>";
+			std::cout << "  >";
 			consoleCom.getline(std::cin);
 			if (consoleCom == "1" || consoleCom == "flora" || consoleCom == "Flora" || consoleCom == "print Flora")
 			{
-				std::cout << "	All plants in the book:" << std::endl;
+				std::cout << "  All plants in the book:" << std::endl;
 				tempBook.printFlora();
 				continue;
 			}
 			else if (consoleCom == "2" || consoleCom == "fauna" || consoleCom == "Fauna" || consoleCom == "print Fauna")
 			{
-				std::cout << "	All animals in the book:" << std::endl;
+				std::cout << "  All animals in the book:" << std::endl;
 				tempBook.printFauna();
 				continue;
 			}
 			else if (consoleCom == "3" || consoleCom == "fungi" || consoleCom == "Fungi" || consoleCom == "print Fungi")
 			{
-				std::cout << "	All fungi in the book:" << std::endl;
+				std::cout << "  All fungi in the book:" << std::endl;
 				tempBook.printFungi();
 				continue;
 			}
@@ -96,18 +96,13 @@ void commandMenu(RedBook& tempBook)
 				else
 					index = strToint(consoleCom.getString());
 				
-				if (index >= tempBook.getSize())
-				{
-					std::cout << "    Invalid level!" << std::endl;
-					continue;
-				}
 				std::cout << "    All species with conservation level " << consoleCom << std::endl;
 				tempBook.printConservationLevel(index);
 				continue;
 			}
 			else if (consoleCom == "5" || consoleCom == "flora" || consoleCom == "Flora" || consoleCom == "print Flora")
 			{
-				std::cout << "	All species in the book:" << std::endl;
+				std::cout << "  All species in the book:" << std::endl;
 				tempBook.printAll();
 				continue;
 			}
@@ -117,24 +112,24 @@ void commandMenu(RedBook& tempBook)
 			}
 			else
 			{
-				std::cout << "	Wrong command!" << std::endl;
+				std::cout << "  Wrong command!" << std::endl;
 				continue;
 			}
 		}
 		else if (consoleCom == "2" || consoleCom == "add" || consoleCom == "remove" || consoleCom == "add/remove")
 		{
-			std::cout << "	1 - add organism" << std::endl;
-			std::cout << "	2 - remove organism" << std::endl;
+			std::cout << "  1 - add organism" << std::endl;
+			std::cout << "  2 - remove organism" << std::endl;
 			std::cout << "  0 - quit" << std::endl;
-			std::cout << "	>";
+			std::cout << "  >";
 			consoleCom.getline(std::cin);
 			if (consoleCom == "1" || consoleCom == "add" || consoleCom == "Add" || consoleCom == "add organism")
 			{
-				std::cout << "	  1 - animal (flora)" << std::endl;
+				std::cout << "    1 - animal (flora)" << std::endl;
 				std::cout << "    2 - plant (fauna)" << std::endl;
 				std::cout << "    3 - fungus (fungi)" << std::endl;
 				std::cout << "    4 - quit" << std::endl;
-				std::cout << "	  >";
+				std::cout << "    >";
 				consoleCom.getline(std::cin);
 				if (consoleCom == "1" || consoleCom == "animal" || consoleCom == "Animal" || consoleCom == "fauna")
 				{
@@ -145,7 +140,7 @@ void commandMenu(RedBook& tempBook)
 					StringC consLvL;
 					StringC con;
 					bool isPredator;
-					std::cout << "	  name:";
+					std::cout << "    name:";
 					std::cin >> name;
 					std::cout << "    lifespan:";
 					std::cin >> lifespan;
@@ -188,11 +183,11 @@ void commandMenu(RedBook& tempBook)
 					int consoleConsLvl;
 					StringC consLvL;
 					StringC con;
-					std::cout << "	  name:";
+					std::cout << "    name:";
 					std::cin >> name;
 					std::cout << "    lifespan:";
 					std::cin >> lifespan;
-					std::cout << "    habitat's number:";
+					std::cout << "    shabitat's number:";
 					int habNum;
 					std::cin >> habNum;
 					Vector<StringC> tempVec;
@@ -227,7 +222,7 @@ void commandMenu(RedBook& tempBook)
 					StringC consLvL;
 					StringC con;
 					bool isPoisonous;
-					std::cout << "	  name:";
+					std::cout << "    name:";
 					std::cin >> name;
 					std::cout << "    lifespan:";
 					std::cin >> lifespan;
@@ -274,8 +269,8 @@ void commandMenu(RedBook& tempBook)
 			}
 			else if (consoleCom == "2" || consoleCom == "remove" || consoleCom == "Remove" || consoleCom == "remove organism")
 			{
-				std::cout << "    name or index" << std::endl;
-				std::cout << "    >";
+				std::cout << "   name or index" << std::endl;
+				std::cout << "   >";
 				consoleCom.getline(std::cin);
 				int comNum = strToint(consoleCom.getString());
 				int index = tempBook.getSpeciesIndex(consoleCom);
@@ -485,7 +480,7 @@ void commandMenu(RedBook& tempBook)
 		}
 		else
 		{
-			std::cout << "Weong command!" << std::endl;
+			std::cout << "Wrong command!" << std::endl;
 			continue;
 		}
 	}
