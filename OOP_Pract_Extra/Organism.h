@@ -24,6 +24,8 @@ public:
 
 	bool setConservationLevel(const StringC&);
 	void setHabitats();
+	void addHabitat(const StringC);
+	bool removeHabitat(const StringC);
 
 	void printHabitats() const;
 	virtual void print() const;

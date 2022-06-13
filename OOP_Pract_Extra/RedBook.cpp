@@ -116,7 +116,7 @@ void RedBook::printAll() const {
 	}
 	*/
 
-void RedBook::printConservationLevel(size_t level) const {
+void RedBook::printConservationLevel(const size_t level) const {
 	for (size_t i = 0; i < size; i++) {
 		if (list[i]->getConservationLevel() == level) {
 			list[i]->print();
@@ -197,4 +197,13 @@ int RedBook::getSpeciesIndex(const StringC& name) const
 size_t RedBook::getSize() const
 {
 	return size;
+}
+
+Organism* RedBook::getSpeciesAt(const size_t index) const
+{
+	if (index >= size)
+	{
+		return nullptr;
+	}
+	return list[index]->clone();
 }

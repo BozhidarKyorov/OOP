@@ -55,6 +55,24 @@ void Organism::setHabitats()
 	}
 }
 
+void Organism::addHabitat(const StringC newHabitat)
+{
+	habitats.pushBack(newHabitat);
+}
+
+bool Organism::removeHabitat(const StringC remHabitat)
+{
+	for (size_t i = 0; i < habitats.getSize(); i++)
+	{
+		if (habitats.At(i) == remHabitat)
+		{
+			habitats.popAt(i);
+			return true;
+		}
+	}
+	return false;
+}
+
 void Organism::printHabitats() const
 {
 	for (int i = 0; i < habitats.getSize(); i++)

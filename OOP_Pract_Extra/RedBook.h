@@ -24,11 +24,12 @@ public:
 	void printFungi() const;
 
 	size_t getSize() const;
+	Organism* getSpeciesAt(const size_t) const;
 
 	bool addOrganism(const Organism&);
 	bool removeAtIndex(size_t);
 
-	void printConservationLevel(size_t) const;
+	void printConservationLevel(const size_t) const;
 	bool setConservationLevelByIndex(int, const StringC&);
 
 	int getSpeciesIndex(const StringC&) const;
