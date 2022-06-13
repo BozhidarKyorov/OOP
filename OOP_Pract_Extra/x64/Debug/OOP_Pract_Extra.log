@@ -1,11 +1,3 @@
-﻿  Fauna.cpp
-  Flora.cpp
-  Fungi.cpp
-  Organism.cpp
-  RedBook.cpp
-  Source.cpp
-E:\Uni\OOP1\OOP_Pract_Extra\Source.cpp(299,6): error C2143: syntax error: missing ';' before '}'
-E:\Uni\OOP1\OOP_Pract_Extra\Source.cpp(379,2): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  Generating Code...
-E:\Uni\OOP1\OOP_Pract_Extra\RedBook.cpp(67): warning C4715: 'RedBook::addOrganism': not all control paths return a value
-E:\Uni\OOP1\OOP_Pract_Extra\Vector.hpp(155): warning C4172: returning address of local variable or temporary: temp
+﻿  Source.cpp
+E:\Uni\OOP1\OOP_Pract_Extra\Source.cpp(454,2): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  OOP_Pract_Extra.vcxproj -> E:\Uni\OOP1\x64\Debug\OOP_Pract_Extra.exe

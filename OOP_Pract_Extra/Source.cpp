@@ -25,8 +25,7 @@ int main()
 void commandMenu(RedBook& tempBook)
 {
 	//MENU 
-	//Not finished for add
-	//finished until change species
+	//finished for current functionalities
 	StringC consoleCom;
 	while (true)
 	{
@@ -134,21 +133,137 @@ void commandMenu(RedBook& tempBook)
 				std::cout << "	  1 - animal (flora)" << std::endl;
 				std::cout << "    2 - plant (fauna)" << std::endl;
 				std::cout << "    3 - fungus (fungi)" << std::endl;
+				std::cout << "    4 - quit" << std::endl;
 				std::cout << "	  >";
 				consoleCom.getline(std::cin);
 				if (consoleCom == "1" || consoleCom == "animal" || consoleCom == "Animal" || consoleCom == "fauna")
 				{
-					Fauna temp;
+					StringC name;
+					int lifespan;
+					StringC habitat;
+					int consoleConsLvl;
+					StringC consLvL;
+					StringC con;
+					bool isPredator;
+					std::cout << "	  name:";
+					std::cin >> name;
+					std::cout << "    lifespan:";
+					std::cin >> lifespan;
+					std::cout << "    habitat's number:";
+					int habNum;
+					std::cin >> habNum;
+					Vector<StringC> tempVec;
+					for (size_t i = 0; i < habNum; i++)
+					{
+						std::cin >> habitat;
+						tempVec.pushBack(habitat);
+					}
+					std::cout << "    conservation lvl (from 0 to 6):";
+					std::cin >> consoleConsLvl;
+					switch (consoleConsLvl)
+					{
+					case 0:consLvL = "least concern"; break;
+					case 1:consLvL = "near threatened"; break;
+					case 2:consLvL = "vulnerable"; break;
+					case 3:consLvL = "endangered"; break;
+					case 4:consLvL = "critically endangered"; break;
+					case 5:consLvL = "extinct in the wild"; break;
+					case 6:consLvL = "extinct"; break;
+					}
+					std::cout << "    is it predator (yes or no):";
+					std::cin >> con;
+					if (con == "yes")
+						isPredator = true;
+					else isPredator = false;
+					
+					Fauna temp(name, lifespan, tempVec , consLvL, isPredator);
+					tempBook.addOrganism(temp);
 					continue;
 				}
 				else if (consoleCom == "2" || consoleCom == "plant" || consoleCom == "Plant" || consoleCom == "flora")
 				{
-					Flora temp;
+					StringC name;
+					int lifespan;
+					StringC habitat;
+					int consoleConsLvl;
+					StringC consLvL;
+					StringC con;
+					std::cout << "	  name:";
+					std::cin >> name;
+					std::cout << "    lifespan:";
+					std::cin >> lifespan;
+					std::cout << "    habitat's number:";
+					int habNum;
+					std::cin >> habNum;
+					Vector<StringC> tempVec;
+					for (size_t i = 0; i < habNum; i++)
+					{
+						std::cin >> habitat;
+						tempVec.pushBack(habitat);
+					}
+					std::cout << "    conservation lvl (from 0 to 6):";
+					std::cin >> consoleConsLvl;
+					switch (consoleConsLvl)
+					{
+					case 0:consLvL = "least concern"; break;
+					case 1:consLvL = "near threatened"; break;
+					case 2:consLvL = "vulnerable"; break;
+					case 3:consLvL = "endangered"; break;
+					case 4:consLvL = "critically endangered"; break;
+					case 5:consLvL = "extinct in the wild"; break;
+					case 6:consLvL = "extinct"; break;
+					}
+					
+					Flora temp(name,lifespan,tempVec,consLvL);
+					tempBook.addOrganism(temp);
 					continue;
 				}
 				else if (consoleCom == "3" || consoleCom == "fungus" || consoleCom == "Fungus" || consoleCom == "fungi")
 				{
-					Fungi temp;
+					StringC name;
+					int lifespan;
+					StringC habitat;
+					int consoleConsLvl;
+					StringC consLvL;
+					StringC con;
+					bool isPoisonous;
+					std::cout << "	  name:";
+					std::cin >> name;
+					std::cout << "    lifespan:";
+					std::cin >> lifespan;
+					std::cout << "    habitat's number:";
+					int habNum;
+					std::cin >> habNum;
+					Vector<StringC> tempVec;
+					for (size_t i = 0; i < habNum; i++)
+					{
+						std::cin >> habitat;
+						tempVec.pushBack(habitat);
+					}
+					std::cout << "    conservation lvl (from 0 to 6):";
+					std::cin >> consoleConsLvl;
+					switch (consoleConsLvl)
+					{
+					case 0:consLvL = "least concern"; break;
+					case 1:consLvL = "near threatened"; break;
+					case 2:consLvL = "vulnerable"; break;
+					case 3:consLvL = "endangered"; break;
+					case 4:consLvL = "critically endangered"; break;
+					case 5:consLvL = "extinct in the wild"; break;
+					case 6:consLvL = "extinct"; break;
+					}
+					std::cout << "    is it poisonous (yes or no):";
+					std::cin >> con;
+					if (con == "yes")
+						isPoisonous = true;
+					else isPoisonous = false;
+
+					Fungi temp(name,lifespan,tempVec,consLvL,isPoisonous);
+					tempBook.addOrganism(temp);
+					continue;
+				}
+				else if (consoleCom == "0" || consoleCom == "quit")
+				{
 					continue;
 				}
 				else
@@ -305,7 +420,7 @@ void commandMenu(RedBook& tempBook)
 				}
 				else if (consoleCom == "0" || consoleCom == "quit")
 				{
-
+					continue;
 				}
 				else
 				{
@@ -351,7 +466,6 @@ void commandMenu(RedBook& tempBook)
 						std::cout << "    Successful change" << std::endl;
 						continue;
 					}
-
 				}
 			}
 			else if (consoleCom == "0" || consoleCom == "quit")
